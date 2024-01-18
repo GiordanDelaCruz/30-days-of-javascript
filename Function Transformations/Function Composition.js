@@ -4,7 +4,7 @@
  * 
  *  Author          : Giordan Andrew
  *  Date            : January 15, 2024
-
+ **/
 
 /**
  * @param {Function[]} functions
@@ -20,7 +20,7 @@ var compose = function(functions) {
         // Calculate the function composition
         let output_of_function = 0;
         for( let i = functions.length-1; i >= 0; i--){
-            // Basa Case: Using the parameter of x for the first function [ E.g f(x) ]
+            // Base Case: Using the parameter of x for the first function [ E.g f(x) ]
             if( i ==  functions.length-1 ){
                 output_of_function = functions[i](x)
             }
@@ -28,7 +28,6 @@ var compose = function(functions) {
             else{
                 output_of_function = functions[i](output_of_function)
             }
-           
         } 
         return output_of_function;
     }
